@@ -1,0 +1,339 @@
+#albums {
+    display: inline-block;
+    font-family: Georgia;
+    max-width: 1010px;
+    text-align: center;
+}
+
+#albums .select-album {
+}
+
+#albums .album-name span {
+    font-weight: bolder;
+    font-style: italic;
+    color: #494949;
+}
+
+#albums #uploadPhoto  fieldset {
+    border-color: #657A74;
+    border-style: dotted none none;
+    border-width: 3px medium medium;
+    padding: 5px;
+    margin: 15px 10px 10px;
+    width: 800px;
+}
+
+#albums fieldset {
+    border: none;
+}
+
+#albums #uploadPhotosHeader {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#albums #uploadPhoto fieldset legend {
+    font-size: 24px;
+    font-weight: normal;
+    margin: auto;
+    margin-left: 40px;
+    width: 180px;
+    color: #333333;
+    border: none;
+}
+
+#thumbsWrapper {
+    position: relative;
+}
+
+#freePhotoList {
+    position: relative;
+    display: inline-block;
+    width: 1000px;
+    padding: 40px;
+    margin-left: -40px;
+    margin-top: -30px;
+    margin-bottom: -20px;
+}
+
+#freePhotoList .ui-selected {
+    border: 1px solid #87B7A9;
+}
+
+#freePhotoList .photo {
+    cursor: pointer;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+}
+
+.placeholder {
+    float: left;
+    clear: both;
+    width: 100%;
+    height: 30px;
+}
+
+#wrapper {
+    position: relative;
+    margin: 40px auto 0px auto;
+
+}
+
+#albumForm {
+}
+
+#albumlist {
+    margin: 0;
+}
+
+.photo_div {
+    width: 70px;
+    height: 70px;
+    float: left;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    padding: 5px;
+    margin: 10px;
+}
+
+#bottom-button {
+    position: relative;
+    diplay: block;
+    clear: both;
+    margin: 10px auto;
+    display: inline-block;
+}
+
+.preview-img {
+    width: 80px;
+    height: 60px;
+}
+
+#albumListUL {
+    margin: auto auto auto -45px;
+    width: 210px;
+}
+
+.fileinput-button {
+    width: 150px;
+}
+
+#albums .album-img-area {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+}
+
+#albums  .album-img {
+    border-radius: 5px;
+}
+
+.album-name {
+    width: 132px;
+    height: 30px;
+    font-size: 13px;
+    line-height: 14px;
+    overflow: hidden;
+}
+
+.each-album {
+    position: relative;
+    float: left;
+    z-index: 5;
+    display: block;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background: none repeat scroll 0 0 #FFFFFF;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    margin: 0 30px 30px 0;
+    padding: 2px;
+    width: 128px;
+    height: 128px;
+}
+
+.each-album:hover {
+    border: 2px solid #87b7a9;
+}
+
+.unfile-album {
+    display: block;
+}
+
+#uploadDialog {
+}
+
+#albumForm #addAlbums {
+    float: left;
+    width: 740px;
+    margin-left: 20px;
+}
+
+
+#albums .remove {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    float: right;
+    line-height: 15px;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    text-align: center;
+    width: 100%;
+}
+
+.picture-close {
+    font-size: 24px;
+    left: 64px;
+    line-height: 0;
+    margin-right: 5px;
+    margin-top: 4px;
+    position: absolute;
+    top: 6px;
+    opacity: 0;
+}
+
+.remove:hover {
+    text-decoration: none;
+}
+
+.picture-close:hover {
+    opacity: 1;
+}
+
+#albumName {
+    margin: auto 0;
+    height: 25px;
+    width: 150px;
+}
+
+.add-album {
+    float: left;
+    text-align: left;
+    font-family: georgia;
+    width: 235px;
+    height: 315px;
+    margin-right: 40px;
+}
+
+.add-album label {
+    color: black;
+    font-style: italic;
+    margin-top: 30px;
+}
+
+.newAlbumImage {
+    margin-left: 7px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    width: 176px;
+    height: 176px;
+}
+
+.newAlbumImage img {
+    border-radius: 10px;
+}
+
+.album-title {
+    margin-top: 4px;
+    font-size: 18px;
+    color: black;
+}
+
+.free-photo-name {
+    font-size: 18px;
+    color: black;
+}
+
+.delete-button-album, .delete-button-photo {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 15px;
+    width: 15px;
+    z-index: 0;
+    margin: -8px -8px 0 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: white;
+}
+
+#albums .divider {
+    width: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+#albums .add-album .btn-success {
+    height: 35px;
+}
+
+#albums .btn-success:hover, #albums .btn-facebook:hover, #albums .btn-warning:hover, #albums .btn-primary:hover {
+    background-position: 0;
+    -webkit-transition: background-position 0.1s linear;
+    -moz-transition: background-position 0.1s linear;
+    -o-transition: background-position 0.1s linear;
+    transition: background-position 0.1s linear;
+}
+
+#albums .btn-success, #albums .btn-facebook, #albums .btn-warning, #albums .btn-primary {
+    background-color: #7FB8A5;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#9BCCBC), to(#79B4A2));
+    background-image: -webkit-linear-gradient(top, #9BCCBC, #79B4A2);
+    background-image: -o-linear-gradient(top, #9BCCBC, #79B4A2);
+    background-image: linear-gradient(to bottom, #9BCCBC, #79B4A2);
+    background-image: -moz-linear-gradient(top, #9BCCBC, #79B4A2);
+    background-repeat: repeat-x;
+    border-color: #79B4A2 #79B4A2 #9BCCBC;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr = '#9bccbc62', endColorstr = '#79b4a251', GradientType = 0);
+    filter: progid:dximagetransform.microsoft.gradient(enabled = false);
+    font-family: Georgia;
+    font-style: italic;
+    font-size: 17px;
+}
+
+#albums .btn-warning {
+    background-color: #B9B9B9;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#D1D1D1), to(#B3B3B3));
+    background-image: -webkit-linear-gradient(top, #D1D1D1, #B3B3B3);
+    background-image: -o-linear-gradient(top, #D1D1D1, #B3B3B3);
+    background-image: linear-gradient(to bottom, #D1D1D1, #B3B3B3);
+    background-image: -moz-linear-gradient(top, #D1D1D1, #B3B3B3);
+    background-repeat: repeat-x;
+    border-color: #B3B3B3 #B3B3B3 #D1D1D1;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr = '#d1d1d162', endColorstr = 'b3b3b3251', GradientType = 0);
+    filter: progid:dximagetransform.microsoft.gradient(enabled = false);
+}
+
+#albums .btn-facebook {
+    width: 180px;
+}
+
+#albums .btn-facebook i, #albums .btn-success i, #albums .btn-warning i, #albums .btn-primary i {
+    margin-top: 3px;
+    margin-right: 6px;
+}
+
+#albums .progress-extended {
+    font-size: 14px;
+}
+
+#albums .progress-success.progress-striped .bar, .progress-striped .bar-success {
+    background-color: #E8A653;
+}
+
+#albums #freePhoto {
+    clear: left;
+}
+
+/*
+from(#9BCCBC), to(#79B4A2));
+*/

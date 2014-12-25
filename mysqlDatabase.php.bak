@@ -1,0 +1,95 @@
+<?php
+    /**
+     * File: mysqlDatabase.php
+     * Created: 8/6/12  6:59 PM
+     * Upgrade, LLC: Upgrade Your Everything
+     * www.upgradeyour.com       903-3CODERS
+     */
+
+    require_once 'include.php';
+
+    class mysqlDatabase {
+        public $sql;
+
+        public function __construct() {
+            $this->sql = $this->connectToDatabase();
+            $this->useDatabase( MYSQL_DB );
+        }
+
+        public function __destruct() {
+            //$this->closeCon();
+        }
+
+        //basic database functions
+        function connectToDatabase() {
+            global $mysqlconnection;
+
+            if( !is_null( $mysqlconnection ) ) {
+                //var_dump( $mysqlconnection );
+                return $mysqlconnection;
+            }
+
+            $mysqlconnection = new mysqli( SERVER_HOST, MYSQL_USER, MYSQL_PW, MYSQL_DB );
+            $link = $mysqlconnection;
+            if( $link->connect_errno ) {
+                echo "Failed to connect to MySQL: ".$this->sql->connect_error;
+            }
+
+            return $link;
+        }
+
+        function implodeArrayToSql( $array, $alphaNumOnly = TRUE, $useMysqlClean = FALSE ) {
+            if( $alphaNumOnly ) {
+                $array = cleanAlphaNum( $array, $useMysqlClean );
+            } else {
+                $array = sanitize( $array, TRUE, $useMysqlClean );
+            }
+            $string = implode( "', '", $array );
+            return "'{$string}'";
+        }
+
+        function useDatabase( $database, $link = 'useOwnLink' ) {
+            if( $link == 'useOwnLink' ) {
+                $link = $this->sql;
+            }
+            $link->select_db( $database );
+        }
+
+        /**
+         * @param $res mysqli_result
+         *
+         * @return array
+         */
+        function sqlToArray( $res ) {
+            return $res->fetch_all( MYSQLI_ASSOC );
+        }
+
+        function error() {
+            return $this->sql->error;
+        }
+
+        function commit() {
+            $this->sql->commit();
+        }
+
+        function insert_id() {
+            return $this->sql->insert_id;
+        }
+
+        function escapeString( $string ) {
+            return $this->sql->real_escape_string( $string );
+        }
+
+        function query( $query ) {
+            $res = $this->sql->query( $query );
+            if( !$res ) {
+                die( '<p style="color:red;font-weight:bold;">mysql error: '.( $this->sql->error ).'<br>With query: '.$query.'</p>' );
+            }
+            /** @var mysqli_result $res */
+            return $res;
+        }
+
+        function closeCon() {
+            return $this->sql->close();
+        }
+    }

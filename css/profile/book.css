@@ -1,0 +1,112 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    border: 0 none;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+fieldset legend {
+    width: 130px;
+}
+
+#scrapbooks .scrapbooksEditBook {
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+#scrapbooks .book_title {
+    cursor: pointer;
+    color: #494949;
+    font-size: 20px;
+}
+
+#scrapbooks .book_title, #scrapbooks .scrapbooksEditBook, #scrapbooks .scrapbookButtonHolder, #scrapbooks .book_created {
+    text-align: left;
+}
+#scrapbooks .book_created{
+    font-size: 12px;
+}
+
+#scrapbooks .scrapbookButtonHolder img {
+    cursor: pointer;
+}
+
+#scrapbooks .scrapbookButtonHolder a {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+#scrapbooks .scrapbooksEditBook a {
+    cursor: pointer;
+    color: #468876;
+}
+
+#scrapbooks .book_icon {
+    margin-top: 20px;
+    width: 120px;
+    height: 150px;
+    background-size: contain;
+}
+
+#scrapbooks .bookIconHolder {
+    /* width: 200px; */
+    width: 150px;
+    height: 240px;
+    margin-right: 25px;
+    border-radius: 10px;
+    /* background-color: rgba(78, 231, 255, 0.24); */
+}
+
+#scrapbooks .bookIconHolder, .view-book {
+    float: left;
+}
+
+#scrapbooks .item_book {
+    float: left;
+    height: 240px;
+    width: 500px;
+    margin-bottom: 60px;
+}
+
+#scrapbooks .view-book {
+    width: 270px;
+}
+
+#profileBody fieldset {
+    width: auto;
+}
+
+#scrapbooks .profileItem {
+    padding-top: 0;
+    margin-right: 0px;
+}
+
+#scrapbooksButton {
+    margin: 0;
+    padding: 0;
+}
+
+#scrapbooksButton, #scrapbookSorts {
+    margin-top: 20px;
+}
+
+#scrapbookSorts {
+    float: left;
+    border-radius: 5px;
+    border: 1px solid #8CC3B2;
+}
+
+#scrapbooksButton, #scrapbookSorts, #scrapbookSorts #sortAlpha, #scrapbookSorts #sortDate {
+    cursor: pointer;
+    display: inline-block;
+    padding: 3px 5px;
+}
+
+#scrapbookSorts #sortAlpha {
+    border-right: 1px solid #CCCCCC;
+}

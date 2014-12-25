@@ -1,0 +1,92 @@
+<?php
+    /**
+     * File: payment.php
+     * Created: 12/12/12  2:04 PM
+     * Upgrade, LLC: Upgrade Your Everything
+     * www.upgradeyour.com       903-3CODERS
+     */
+
+    require_once 'include.php';
+    require_once( 'user.php' );
+    set_include_path( get_include_path().PATH_SEPARATOR.'pp'.DIRECTORY_SEPARATOR.'lib' );
+    require_once( 'services/PayPalAPIInterfaceService/PayPalAPIInterfaceServiceService.php' );
+
+
+    if( !( isset( $_SESSION['loggedIn'] ) && $_SESSION['loggedIn'] == TRUE ) ) {
+        header( "Location: ".URL_PREFIX );
+        exit;
+    }
+    $user = new user();
+    if( $user->currentUserIsPaid() ) {
+        header( "Location: ".URL_PREFIX.'profile/' );
+        exit;
+    }
+
+    $logger = new PPLoggingManager( 'SetExpressCheckout' );
+
+    $userid = $user->getCurrentUsersId();
+
+    $serverName = $_SERVER['SERVER_NAME'];
+    $serverPort = $_SERVER['SERVER_PORT'];
+    $returnUrl = WEBSITE_URL.'paymentcomplete.php';
+    $cancelUrl = WEBSITE_URL;
+
+    $orderTotal = new BasicAmountType();
+    $orderTotal->currencyID = 'USD';
+    $orderTotal->value = PAYPAL_COST_1YEAR;
+
+
+    $taxTotal = new BasicAmountType();
+    $taxTotal->currencyID = 'USD';
+    $taxTotal->value = '0.0';
+
+    $itemDetails = new PaymentDetailsItemType();
+    $itemDetails->Name = 'TrinketLily one year subscription';
+
+
+    $itemDetails->Amount = $orderTotal;
+    $itemDetails->Quantity = '1';
+    $itemDetails->ItemCategory = 'Digital';
+
+    $PaymentDetails = new PaymentDetailsType();
+    $PaymentDetails->PaymentDetailsItem[0] = $itemDetails;
+    $PaymentDetails->OrderTotal = $orderTotal;
+    $PaymentDetails->PaymentAction = 'Sale';
+    $PaymentDetails->ItemTotal = $orderTotal;
+    $PaymentDetails->TaxTotal = $taxTotal;
+    $PaymentDetails->Custom = $userid;
+    $PaymentDetails->NotifyURL = WEBSITE_URL.'pay.php';
+
+
+    $setECReqDetails = new SetExpressCheckoutRequestDetailsType();
+    $setECReqDetails->PaymentDetails[0] = $PaymentDetails;
+    $setECReqDetails->CancelURL = $cancelUrl;
+    $setECReqDetails->ReturnURL = $returnUrl;
+    $setECReqDetails->ReqConfirmShipping = 0;
+    $setECReqDetails->NoShipping = 1;
+
+    $customBgColor = '657A74';
+    $setECReqDetails->cppcartbordercolor = $customBgColor;
+    $setECReqDetails->cpppayflowcolor = $customBgColor;
+    $setECReqDetails->cppheaderbackcolor = $customBgColor;
+    $setECReqDetails->cppheaderbordercolor = $customBgColor;
+
+    $setECReqType = new SetExpressCheckoutRequestType();
+    $setECReqType->SetExpressCheckoutRequestDetails = $setECReqDetails;
+
+    $setECReq = new SetExpressCheckoutReq();
+    $setECReq->SetExpressCheckoutRequest = $setECReqType;
+
+    $PayPal_service = new PayPalAPIInterfaceServiceService();
+    $setECResponse = $PayPal_service->SetExpressCheckout( $setECReq );
+
+    if( $setECResponse->Ack == 'Success' ) {
+        $token = $setECResponse->Token;
+        $payPalURL = 'https://www.sandbox.paypal.com/webscr?cmd=_express-checkout&token='.$token;
+        header( "Location: ".$payPalURL );
+        //echo "<br><br><br><br><br><br><br><br><a href=https://www.sandbox.paypal.com/incontext?token=$token />Click here to continue to https://www.sandbox.paypal.com/incontext?token=$token</a>";
+    } else {
+        $logger->error( "error in SetEC API call".var_export( $setECResponse ) );
+        $logger->error( "error in SetEC API call".var_export( $setECResponse, TRUE ) );
+        echo 'There was an error- please go back and try again.';
+    }

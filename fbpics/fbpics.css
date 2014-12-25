@@ -1,0 +1,188 @@
+body {
+    font: 13px/1.231 arial, helvetica, clean, sans-serif;
+}
+
+#fbWrapper {
+    text-align: center;
+    width: 880px;
+    margin: 0 auto;
+}
+
+/********* FACEBOOK PICTURE DISPLAY ALBUM ***********/
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: 0;
+}
+
+li {
+    list-style: none;
+}
+
+h2 {
+    font-size: 1.4em;
+}
+
+#g-album-grid {
+    margin: 1em 0;
+    position: relative;
+    z-index: 1;
+}
+
+.ui-helper-clearfix {
+    display: block;
+}
+
+.ui-helper-clearfix::after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#g-album-grid .g-album {
+    background-color: #E8E8E8;
+}
+
+#g-album-grid .g-item {
+    font-size: .7em;
+    margin: 3px;
+    background-color: white;
+    border: 1px solid white;
+    float: left;
+    padding: .6em 8px;
+    position: relative;
+    text-align: center;
+    width: 130px;
+    z-index: 1;
+}
+
+#g-album-grid .g-item.fbPic {
+    width: auto;
+}
+
+g-photo h2, .g-item .g-metadata {
+    margin-bottom: .6em;
+}
+
+a, a.ui-state-hover, input.ui-state-hover, button.ui-state-hover {
+    color: #5382BF !important;
+    cursor: pointer !important;
+    text-decoration: none;
+    -moz-outline-style: none;
+}
+
+h1, h2, h3, h4, h5, strong, th {
+    font-weight: bold;
+}
+
+.yui-g {
+    zoom: 1;
+}
+
+#g-album-grid .g-item h2 {
+    margin: 5px 0;
+}
+
+#g-album-grid .g-hover-item {
+    background-color: #EBEBEB;
+    border: 1px solid #000;
+}
+
+.g-hover-item h2, .g-hover-item .g-metadata {
+    display: block;
+}
+
+#g-content {
+    text-align: center;
+    padding-left: 20px;
+    position: relative;
+    /*  width: 696px;  */
+}
+
+#g-album-grid .g-item {
+    cursor: pointer;
+}
+
+.g-metadata {
+    /*   text-align: left;   */
+}
+
+#g-album-grid .selectedPictures {
+    background-color: #e8ebd8;
+    border: 1px solid black;
+}
+
+.ib {
+    display: inline-block;
+}
+
+#g-content .makeFacebookSelection {
+    border: 1px solid black;
+    color: white;
+    background-color: #3B5998;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#modalHolder {
+    position: absolute;
+    background-color: white;
+    display: none;
+    width: 800px;
+    z-index: 55;
+}
+
+img.wideFbPic {
+    width: 250px;
+}
+
+img.tallFbPic {
+    height: 250px;
+}
+
+img.widerFbPic {
+
+}
+
+img.tallerFbPic {
+
+}
+
+.topExplanation {
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 1.2em;
+    font-family: Georgia;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.modalPleaseWait {
+    display: none;
+    position: fixed;
+    z-index: 10001;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, .8) url('/elance/trinketlily/images/ajax-loader.gif') 50% 50% no-repeat;
+}
+
+body.loading {
+    overflow: hidden;
+}
+
+body.loading .modalPleaseWait {
+    display: block;
+}

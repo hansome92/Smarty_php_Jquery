@@ -1,0 +1,325 @@
+body {
+    /*
+    background-color: #657A74;
+    background-image: url('images/background.png');
+    background-repeat: repeat;
+    */
+    background-color: transparent;
+}
+
+.modalBackground {
+    background-color: #354d47
+}
+
+.preset-button {
+    width: 110px;
+    font-weight: bold !important;
+    font-size: 12px;
+    padding: 5px !important;
+}
+
+/*   *******************************************   */
+
+body {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    /*  min-height: 1300px; */
+}
+
+#editorHolder {
+    text-align: center;
+}
+
+#editorInnerHolder {
+    display: inline-block;
+    width: 1100px;
+    height: 800px;
+}
+
+/*   menus   */
+.btn {
+    cursor: pointer;
+}
+
+#menuHolder {
+    height: 120px;
+}
+
+#menuTop {
+    height: 50px;
+}
+
+#saveProgress, #inEditorPreview {
+    display: inline-block;
+}
+
+#saveProgress {
+    margin-left: 15px;
+    background-image: url('images/editorSaveButton.png');
+    width: 180px;
+    height: 38px;
+}
+
+#inEditorPreview {
+    margin-left: 5px;
+    background-image: url('images/editorPreviewButton.png');
+    display: inline-block;
+    width: 136px;
+    height: 38px;
+}
+
+.closeEditor {
+    float: left;
+    background-image: url('images/cancelButton.png');
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    height: 45px;
+    width: 45px;
+    margin-right: 35px;
+}
+
+#menuBottom {
+    height: 35px;
+    background-color: white;
+    border-radius: 7px;
+    display: inline-block;
+    width: 1100px;
+    margin-bottom: 10px;
+}
+
+#menuBottom img {
+    float: left;
+}
+
+/*   main editors content   */
+#editorMainHolder {
+    text-align: left;
+    width: 1080px;
+    height: 670px;
+    padding: 10px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+}
+
+#editorInnerHolder {
+    /* z-index: 105; */
+}
+
+/*   scrapbook window   */
+#editorScrapbookWindowHolder {
+    width: 850px;
+    display: inline-block;
+    float: left;
+}
+
+#editorScrapbookWindow {
+    width: 850px;
+    height: 630px;
+    border: 1px solid #d2d2d2;
+    background: transparent;
+    position: relative;
+}
+
+/*   editors pagination   */
+#editorPagination {
+    color: #909090;
+    text-align: center;
+    font-style: italic;
+    font-family: 'Georgia';
+    font-size: 18px;
+    margin: 9px auto;
+    height: 20px;
+    width: 850px;
+}
+
+#editorPaginationPrevious, #goToPreviousPage {
+    display: inline-block;
+    float: left;
+}
+
+#goToPreviousPage {
+    margin-left: 20px;
+    padding-right: 10px;
+}
+
+#editorPaginationNext, #goToNextPage {
+    display: inline-block;
+    float: right;
+}
+
+#editorPaginationPrevious {
+    margin-top: -2px;
+}
+
+#goToNextPage {
+    margin-right: 20px;
+    padding-left: 10px;
+}
+
+#editorPaginationPageNumber {
+    display: inline-block;
+}
+
+#scrapbookPageNumber {
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    height: 20px;
+    width: 28px;
+    border: 2px solid transparent;
+    color: #358580;
+}
+
+#scrapbookPageNumber:hover {
+    border: 2px solid #F1CA7E;
+}
+
+/*   vertical content   */
+#editorVerticalContentHolder {
+    color: black;
+    text-align: center;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 670px;
+}
+
+#editorVerticalContentScroller, #editorVerticalPhotos, #editorVerticalAlbums, #editorVerticalwallpapaer, #editorVerticalborders {
+    text-align: center;
+    /*width: 200px;*/
+    display: inline-block;
+}
+
+#editorVerticalContentScrollbar {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: center;
+    float: right;
+    width: 22px;
+    height: 658px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    border: 1px solid #d2d2d2;
+    background-color: #e9e9e9;
+}
+
+.img_border {
+
+}
+
+/*   scrapbook   */
+li {
+    display: block;
+    margin: 10px 5px;
+}
+
+/*   trinket image holders   */
+.trinketImageHolder {
+    /*    background-color: rgba(0, 0, 255, 0.18);
+    */
+    display: inline-block;
+}
+
+.fonts {
+    display: inline-block;
+    padding: 5px 15px 6px;
+    color: #fff !important;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    position: relative;
+    cursor: move;
+    width: 160px;
+    height: 30px;
+    text-align: left;
+    margin-top: 3px;
+    margin-left: 7px;
+    overflow: hidden;
+
+}
+
+/* Styles for the entire LavaLamp menu */
+.lavaLamp {
+    position: relative;
+    height: 46px;
+    width: 900px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+/* Force the list to flow horizontally */
+.lavaLamp li {
+    margin-top: 2px;
+    float: left;
+    list-style: none;
+}
+
+/* Represents the background of the highlighted menu-item. */
+.lavaLamp li.back {
+
+    width: 9px;
+    height: 30px;
+    z-index: 8;
+    position: absolute;
+}
+
+.lavaLamp li.back .left {
+
+    height: 30px;
+    margin-right: 9px;
+}
+
+/* Styles for each menu-item. */
+
+#editorVerticalPhotos .album_photo img, #editorVerticalAlbums .albums img {
+    max-height: 180px;
+    max-width: 180px;
+
+}
+
+#editorVerticalPhotos div.album_photo img {
+    display: inline-block;
+    border-radius: 5px;
+}
+
+#editorVerticalAlbums div.albums {
+    padding: 20px 0;
+}
+
+#editorVerticalPhotos div.album_photo {
+    height: 190px;
+    width: 190px;
+}
+
+.treatmentImage {
+    width: 190px;
+
+}
+
+.imagefilter {
+    height: auto;
+    padding: 0;
+    width: 200px;
+    border: none;
+    background: transparent;
+    margin-bottom: 10px;
+    margin-left: 8px;
+}
+
+.treatmentName {
+    font-family: 'Georgia';
+    margin-top: 2px;
+    color: #898989;
+}
+
+#cboxLoadedContent div {
+    background-color: transparent;
+}

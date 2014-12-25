@@ -1,0 +1,27 @@
+/* 
+    Document   : preview
+    Created on : 2012/07/30, 5:45:34
+    Author     : Administrator
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#previewScreen{
+    text-align:center;
+    display: inline-block;
+    position: relative;
+}
+#previewPage{
+    color: #909090;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    position:absolute;
+    margin-left:330px;
+    margin-top:-60px;
+    height: 40px;
+    width: 800px;
+}
+body{
+    height: 600px;
+}

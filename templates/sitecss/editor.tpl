@@ -1,0 +1,10 @@
+{fetch file='css/profile/book.css'}
+{fetch file='css/colorbox.css'}
+{fetch file='editor/css/sunny/sunny.css'}
+{fetch file='editor/css/dragdrop.css'}
+{include file="fontscss/fontscss.tpl"}
+{fetch file='editor/css/colorPicker/colorpicker.css'}
+{fetch file='editor/css/jquery.Jcrop.css'}
+{fetch file='editor/css/editor-menu.css'}
+{fetch file='editor/css/editor.css'}
+{fetch file='editor/css/preview.css'}

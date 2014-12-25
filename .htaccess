@@ -1,0 +1,34 @@
+
+#show main page on any errors
+ErrorDocument 401 /
+ErrorDocument 403 /
+ErrorDocument 404 /
+ErrorDocument 500 /
+
+#deny access to directory listings
+Options -Indexes
+IndexIgnore *
+
+
+RewriteEngine On
+
+# add www to host
+#RewriteCond %{HTTP_HOST} !^www\.
+#RewriteRule ^(.*)$ http://www.%{HTTP_HOST}%{REQUEST_URI} [R=302]
+
+#dont rewrite if file or directory exists
+RewriteCond %{REQUEST_FILENAME} -f  [OR]
+RewriteCond %{REQUEST_FILENAME} -d  [OR]
+RewriteCond %{REQUEST_FILENAME} -l
+RewriteRule ^                   -   [L]
+
+#dont rewrite anything in these directories
+RewriteRule ^a/                   -   [L]
+RewriteRule ^editor/                   -   [L]
+RewriteRule ^fbpics/                   -   [L]
+RewriteRule ^admin/                   -   [L]
+RewriteRule ^img/                   -   [L]
+RewriteRule ^uploadify/*                   -   [L]
+
+#rewrite variables to a nice clean url
+RewriteRule ^([^/]*)/?([^/]*)?/?([^/]*)?/?([^/]*)?$ /trinketlily/index.php?p=$1&$2=$3&$4=$5 [L]

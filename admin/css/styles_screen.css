@@ -1,0 +1,981 @@
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px ;
+	background-color: #ffffff;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #66603c;
+}
+a.top_link_admin_selected {
+	background: #66603c;
+	color: white;
+}
+th {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+td {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+input{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+select{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+option{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+textarea{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	border-style: outset;
+}
+hr{
+	height: 1px;
+	border-style: none;
+	color: black; /* need this for IE */
+	background-color: black;
+}
+
+
+h3{
+}
+
+/* used with subtitles ("Search for records", "Edit the record", etc.) */
+.subtitle{
+font-size: 18px;
+font-weight: bold;
+}
+
+/* the main big table that contain all the page */
+.main_table{
+	width:100%;
+	height: 100%;
+	background-color: #ffffff;
+	padding: 10px; /* doesn't work with IE, cellpadding in header */
+	border-style: solid;
+	border-width: 0px;
+	border-color: black;
+	vertical-align: bottom;
+}
+
+
+/*******************************************************/
+/************************************************ RESULTS PAGE */
+
+/* "n records found" message */
+.n_results_found {
+	color:black;
+	font-weight: bold;
+}
+
+/* "page n of m" sentence */
+.page_n_of_m {
+	color:black;
+}
+
+/* links of the navigation bar ( << < 1 2 3......) */
+a.navig {
+	color:white;
+	padding:5px;
+	text-decoration:none;
+	background-color:#a9b299;
+}
+a.navig:hover {
+	color:black;
+	padding:5px;
+	text-decoration:none;
+	background-color:#ffffff;
+}
+
+/* previous next links */
+a.previous_next {
+	color:#66603c;
+	font-size:16px;
+	background-color:#fdfdfd;
+	padding: 5px;
+	text-decoration: none;
+	border: solid 1px #dddddd;
+}
+a.previous_next:hover {
+	color:#fdfdfd;
+	font-size:16px;
+	background-color:#66603c;
+	padding: 5px;
+	text-decoration: none;
+	border: solid 1px #dddddd;
+}
+
+/* create new item button  */
+a.create_new_item {
+	color:#66603c;
+	font-size:16px;
+	background-color:#fdfdfd;
+	padding: 5px;
+	text-decoration: none;
+	border: solid 1px #dddddd;
+}
+a.create_new_item:hover {
+	color:#fdfdfd;
+	font-size:16px;
+	background-color:#66603c;
+	padding: 5px;
+	text-decoration: none;
+	border: solid 1px #dddddd;
+}
+
+
+/* current page in the navigation bar ( << < 1 2 3......) */
+.navig {
+	color:black;
+}
+
+/* order by links */
+/* normal */
+a.order_link {
+	color:#000000;
+	font-size: 14px;
+	font-weight:normal;
+	text-decoration: none;
+}
+/* currently selected */
+a.order_link_selected {
+	color:#000000;
+	font-size: 14px;
+	font-weight:bold;
+	text-decoration: none;
+}
+
+/* the small arrow near the column head which represents currently the order by field */
+.arrow {
+	font-size: 14px;
+}
+
+
+/* results table */
+
+table.results {
+}
+
+/* result rows */
+.tr_results_header {
+	
+
+}
+
+/* results_1 and results_2 differ only for the background-color, this create the alternate row colors effect */
+.tr_results_1 {
+	font-size: 8pt;
+	vertical-align: top;
+	white-space: nowrap;
+	background-color: #ffffff;
+}
+.tr_results_2 {
+	font-size: 8pt;
+	vertical-align: top;
+	white-space: nowrap;
+	background-color: #EFEFEF;
+}
+
+.tr_highlighted_onmouseover{ /* a results table row when the mouse pointer is over it */
+	font-size: 8pt;
+	color: #ffffff;
+	vertical-align: top;
+	white-space: nowrap;
+	background-color: #a8b19b;
+}
+.tr_highlighted_onclick{ /* a results table row when the click on it */
+	font-size: 8pt;
+	color: #ffffff;
+	vertical-align: top;
+	white-space: nowrap;
+	background-color: #a8b19b;
+}
+
+/* coloumn headings */
+th.results {
+	white-space: nowrap;
+	
+	padding:10px;
+	text-align: left;
+	
+	background: #d5c287; /* Old browsers */
+
+	background: -moz-linear-gradient(top,  #fefcea 0%, #d5c287 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefcea), color-stop(100%,#d5c287)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fefcea 0%,#d5c287 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fefcea 0%,#d5c287 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fefcea 0%,#d5c287 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fefcea 0%,#d5c287 100%); /* W3C */
+
+	
+	
+}
+
+
+th.results_ie9{ /* just for IE 8 9 */
+	white-space: nowrap;
+	padding:10px;
+	text-align: left;
+	background: #d5c287; /* Old browsers */
+}
+
+
+/* result cells */
+/* results_1 and results_2 differ only for the background-color, this create the alternate row colors effect */
+/*
+td.results_1 {
+	font-size: 8pt;
+	vertical-align: top;
+	white-space: nowrap;
+	background-color: #EFEFEF;
+}
+td.results_2 {
+	font-size: 8pt;
+	vertical-align: top;
+	white-space: nowrap;
+	background-color: #ffffff;
+}
+*/
+/* control (edit, delete, details) cells */
+/* results_1 and results_2 differ only for the background-color, this create the alternate row colors effect */
+td.controls_1 {
+	font-size: 8pt;
+	background-color: #ffffff;
+}
+td.controls_2 {
+	font-size: 8pt;
+	background-color: #ffffff;
+}
+
+a.export_to_csv{
+	color: #66603c;
+	
+	text-decoration:none;
+}
+
+/* "Total records: n" sentence */
+.total_records {
+}
+
+/* links of the bottom menu (insert, search,...) */
+/* now this links are on the TOP but still have the old name */
+a.bottom_menu{
+	color: black;
+	font-size: 18px;
+	text-decoration: none;
+}
+a.bottom_menu_active{
+	color: black;
+	font-size: 18px;
+	text-decoration: none;
+	background-color:#ffffff;
+	-webkit-border-radius:6px;
+	-moz-border-radius:9px;
+}
+a.bottom_menu:hover{
+background-color:#ffffff;
+-webkit-border-radius:6px;
+-moz-border-radius:9px;
+}
+
+/* links for the static pages */
+a.static_pages_menu{
+	color: black;
+	font-size: 18px;
+	text-decoration: none;
+}
+a.static_pages_menu_active{
+	color: black;
+	font-size: 18px;
+	text-decoration: none;
+	background-color:#ffffff;
+	-webkit-border-radius:6px;
+	-moz-border-radius:9px;
+}
+a.static_pages_menu:hover{
+background-color:#ffffff;
+-webkit-border-radius:6px;
+-moz-border-radius:9px;
+}
+
+/* home link */
+a.home{
+	color: black;
+	font-size: 18px;
+	text-decoration: none;
+}
+a.home:hover{
+background-color:#ffffff;
+-webkit-border-radius:6px;
+-moz-border-radius:9px;
+}
+
+/* change table combo box  */
+.select_change_table{
+}
+
+/* change table button */
+.button_change_table{
+}
+
+/* change records per page combo box*/
+.select_records_per_page{
+}
+/*******************************************************/
+
+/*******************************************************/
+/************************************************ FORM (insert, search and update form) */
+
+
+
+/* rows containing insert, save and search buttons */
+.tr_button_form {
+	text-align: left;
+}
+
+/* rows containing the all/any in the search form */
+.tr_operator_form{
+	text-align: center;
+}
+
+/* the cell that contains the label in the form */
+.td_label_form{
+	text-align: right;
+	vertical-align: top;
+	padding-bottom: 40px;
+	white-space: nowrap;
+}
+
+/* the cell that contains the input (textbox, textarea, etc) in the form */
+.td_input_form{
+	vertical-align: top;
+	white-space: nowrap;
+}
+
+/* the cell that contains the hint in the form */
+.td_hint_form{
+	vertical-align: top;
+}
+
+/* NULL word */
+.null_word{
+	font-style: italic;
+}
+
+/* insert, save and search buttons */
+.button_form{
+	
+	color:#66603c;
+	font-size:16px;
+	
+	
+	
+	text-decoration: none;
+	border: solid 1px #dddddd;
+}
+
+.button_form:hover{
+	
+	
+	font-size:16px;
+	
+	background-color:#66603c;
+	color: #fdfdfd;
+	background-image: none;
+	
+	
+	text-decoration: none;
+	border: solid 1px #dddddd;
+}
+
+.button_form_quick_search{
+	font-size:14px;
+}
+
+.button_form_quick_search:hover{
+	font-size:14px;
+	background-color:#66603c;
+	color: #fdfdfd;
+	background-image: none;
+}
+
+/* error messages (e.g. "You haven't filled out some required fields...." */
+.error_messages_form{
+	color: red;
+}
+
+.change_table{
+	margin-top: 0px;
+	margin-left: 0px;
+	}
+
+.tr_form_separator{
+	text-align: left;
+	font-weight:bold;
+	color: #000000;
+	
+	
+	
+	white-space: nowrap;
+	
+	padding:20px;
+	text-align: left;
+	
+	background: #d5c287; /* Old browsers */
+
+	background: -moz-linear-gradient(top,  #fefcea 0%, #d5c287 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefcea), color-stop(100%,#d5c287)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fefcea 0%,#d5c287 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fefcea 0%,#d5c287 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fefcea 0%,#d5c287 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fefcea 0%,#d5c287 100%); /* W3C */
+	
+}
+
+.hr_form_separator{
+	height: 1px;
+	width: 100px;
+	float: left;
+	
+}
+
+
+/*******************************************************/
+/************************************************ DETAIL PAGE */
+/* the cell that contains the label */
+.td_label_details{
+	text-align: right;
+	vertical-align: top;
+}
+
+/* the cell that contains the value */
+.td_value_details{
+	vertical-align: top;
+}
+/*******************************************************/
+
+/*******************************************************/
+/************************************************ LOGIN FORM */
+.table_login_form{
+text-align: center;
+border-width:1px;
+border-color: #000000;
+border-style: solid;
+text-align:"center";
+background-color:#eeeeee;
+font-size:20pt;
+padding: 5px;
+}
+
+.tr_header_login_form{
+background-color:#a9b299;
+font-weight:bold;
+color:#ffffff;
+}
+
+.td_label_login_form{
+font-size:15pt;
+}
+
+.input_login_form{
+border-width:1px;
+border-color: #cccccc;
+border-style: solid;
+padding: 5px;
+font-size:20pt;
+}
+
+.login_button{
+	
+	color:#66603c;
+	font-size:16px;
+	background-color:white;
+	padding: 5px;
+	text-decoration: none;
+	border: solid 1px #dddddd;
+
+}
+/*******************************************************/
+
+
+div.break {
+	page-break-before:always
+}
+table.labels {
+	width: 21cm
+}
+td.address {
+	height: 3.4cm;
+	width: 10cm;
+	text-align: left;
+	vertical-align: top;
+	margin-top: 10px;
+	margin-left: 10px;
+	font-size: 14px
+}
+td.marginvert {
+	width: 0.5cm
+}
+td.marginorizz {
+	height: 1.2cm
+}
+
+/* bottom right credits */
+.powered_by_dadabik{
+	font-size: 12px
+}
+
+/* the table containing all the interface */
+.table_interface_container{
+	background-color:#eeeeee;
+	width:100%;
+	height:100%;
+	border:0px;
+	padding:0px;
+	
+}
+/* the table containing all the interface, login page */
+.table_interface_container_login{
+	background-color:#eeeeee;
+	border:0px;
+	padding:0px;
+	
+}
+/* the logo row of the container table */
+.table_interface_container_tr_logo{
+	background-color: #ffffff;
+	width:100%;
+	height:10px;
+	padding:0px;
+	
+}
+.table_interface_container_tr_logo_admin{
+	/*
+	background-color: #a8b19b;
+	*/
+	background-color: #ffffff;
+	width:100%;
+	height:10px;
+	padding:0px;
+	
+}
+/* the menu (home, insert, search,...) row of the container table, see table_interface_container_table_menu for additional settings */
+.table_interface_container_tr_menu{
+	
+}
+/* the menu (home, insert, search,...) subtable of the container table */
+.table_interface_container_table_menu{
+	background-color: #a9b299;
+	width:100%;
+	padding:4;
+	white-space: nowrap;
+	
+	
+	background: #a9b299; /* Old browsers */
+
+	background: -moz-linear-gradient(top,  #fefcea 0%, #a9b299 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefcea), color-stop(100%,#a9b299)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fefcea 0%,#a9b299 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fefcea 0%,#a9b299 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fefcea 0%,#a9b299 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fefcea 0%,#a9b299 100%); /* W3C */
+	
+}
+
+.table_interface_container_table_menu_ie9{ /* just for IE 8 9 */
+	width:100%;
+	padding:4;
+	background: #a9b299; /* Old browsers */	
+}
+
+
+
+/* the menu (home, insert, search,...) row of the container table, see table_interface_container_table_menu_admin for additional settings */
+.table_interface_container_tr_menu_admin_area{
+	/*
+	background-color: #ff7700;
+	height:10px;
+	*/
+}
+/* the menu (home, insert, search,...) subtable of the container table */
+.table_interface_container_table_menu_admin_area{
+	background-color: #ff7700;
+	width:100%;
+	padding:4;
+	
+	
+	background: #ff7700; /* Old browsers */
+
+	background: -moz-linear-gradient(top,  #fefcea 0%, #ff7700 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefcea), color-stop(100%,#ff7700)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fefcea 0%,#ff7700 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fefcea 0%,#ff7700 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fefcea 0%,#ff7700 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fefcea 0%,#ff7700 100%); /* W3C */
+	
+}
+
+.table_interface_container_table_menu_admin_area_ie9{
+	width:100%;
+	padding:4;
+	background: #ff7700; /* Old browsers */
+}
+
+/* the popup div that shows the help in the interface configurator */
+#div_help
+{
+    position: absolute;
+    display: none;
+    width: 400px;
+    border: 2px solid #ff7700;
+}
+
+#div_help_content
+{
+    background-color: White;
+    height: 200px;
+    padding: 8px;
+    overflow: scroll;
+}
+
+#div_help_content_title
+{
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+
+
+
+/* the popup div that shows the template instructions in the datagrid configurator */
+#div_template_instructions
+{
+    position: absolute;
+    display: none;
+    width: 400px;
+    border: 2px solid #ff7700;
+}
+
+#div_template_instructions_content
+{
+    background-color: White;
+    height: 200px;
+    padding: 8px;
+    overflow: scroll;
+}
+
+#div_template_instructions_content_title
+{
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+
+
+
+
+
+
+
+/*
+general form styles, derived work from:
+http://codecanyon.net/item/css3-form-elements-pack/2831697
+*/
+
+
+.css_form input, 
+.css_form textarea {
+	/*
+	float: left;
+	*/
+}     
+.css_form input,
+.css_form textarea {
+	position:relative;
+	padding:6px 9px;
+	border:1px solid #cccccc;
+	border:1px solid rgba(255,255,255,1);
+	background-color: #fdfdfd;
+	
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fdfdfd), to(#f4f4f4));
+	background-image: -webkit-linear-gradient(top, #fdfdfd, #f4f4f4);
+	background-image: -moz-linear-gradient(top, #fdfdfd, #f4f4f4);
+	background-image: -ms-linear-gradient(top, #fdfdfd, #f4f4f4);
+	background-image: -o-linear-gradient(top, #fdfdfd, #f4f4f4);
+	background-image: linear-gradient(top, #fdfdfd, #f4f4f4);
+	
+	-moz-box-shadow: 0 1px 4px #888888;
+	-webkit-box-shadow: 0 1px 4px #888888;
+	box-shadow: 0 1px 4px #888888;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.55), inset 0 1px 1px rgba(255,255,255,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.55), inset 0 1px 1px rgba(255,255,255,0.5);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.55), inset 0 1px 1px rgba(255,255,255,0.5);
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	transition: all 0.2s;
+}   
+.css_form input:hover,
+.css_form textarea:hover {
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.7), inset 0 1px 1px rgba(255,255,255,0.4);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.7), inset 0 1px 1px rgba(255,255,255,0.4);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.7), inset 0 1px 1px rgba(255,255,255,0.4);
+}
+.css_form input:focus,
+.css_form textarea:focus {
+	color:#111111;
+	outline:none;
+	-moz-box-shadow: 0 1px 4px rgba(0,0,0,0.8), inset 0 1px 1px rgba(255,255,255,0.4);
+	-webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.8), inset 0 1px 1px rgba(255,255,255,0.4);
+	box-shadow: 0 1px 4px rgba(0,0,0,0.8), inset 0 1px 1px rgba(255,255,255,0.4);
+}
+
+.css_form .select_element {
+	/*
+	float: left;
+	*/
+	width:310px;
+	overflow: hidden;
+	position: relative;
+	border:1px solid #cccccc;
+	border:1px solid rgba(255,255,255,1);
+	background-color: #fdfdfd;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fdfdfd), to(#f4f4f4));
+	background-image: -webkit-linear-gradient(top, #fdfdfd, #f4f4f4);
+	background-image: -moz-linear-gradient(top, #fdfdfd, #f4f4f4);
+	background-image: -ms-linear-gradient(top, #fdfdfd, #f4f4f4);
+	background-image: -o-linear-gradient(top, #fdfdfd, #f4f4f4);
+	background-image: linear-gradient(top, #fdfdfd, #f4f4f4);
+	-moz-box-shadow: 0 1px 4px #888888;
+	-webkit-box-shadow: 0 1px 4px #888888;
+	box-shadow: 0 1px 4px #888888;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255,255,255,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255,255,255,0.5);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255,255,255,0.5);
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.css_form .select_element select {
+	width:100%;
+	height:30px;
+	font-size:14px;
+	padding: 6px 0 6px 10px;
+	border: 0;
+	background: none;
+	outline: none;
+}
+
+.css_form .select_element_records_per_page {
+
+float: left;
+width:60px;
+}
+
+.css_form .select_element_change_table {
+
+float: left;
+}
+
+.css_form .select_element_select_type {
+
+float: left;
+width:120px;
+}
+
+.css_form .select_element_filters {
+
+float: left;
+width: 155px;
+}
+
+.css_form .select_element_search_operator {
+
+float: left;
+width:auto;
+}
+
+.css_form .select_element_date_dd_mm {
+
+float: left;
+width:50px;
+}
+
+.css_form .select_element_date_yyyy {
+
+float: left;
+width:100px;
+}
+	
+.css_form .select_element select option {
+		background: #fdfdfd;
+		width: 100%;
+	}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.css_form .select_element:after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: 10px;
+		margin-top: -3px;
+		border: 5px solid transparent;
+		border-top: 5px solid #333333;
+		pointer-events: none;
+	}
+	.css_form .select_element select,
+	.css_form .select_element select option {
+		-webkit-appearance: none;
+		appearance: none;
+	}
+}
+
+.css_form input[type="number"] {
+	width:34px;
+}
+
+/* tooltip */
+.tooltip {
+	outline:none;
+}
+.tooltip strong {
+	line-height:30px;
+}
+.tooltip .tooltip_content {
+	z-index: 10;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+	left:-9999em;
+	padding: 9px 12px 15px 12px;
+	margin-top: -30px;
+	margin-left: 15px;
+	width: 210px;
+	line-height: 16px;
+	position: absolute;
+	color: #FFF;
+	text-shadow:1px 1px 0px #000000;
+	border: 1px solid #000;
+	background: #121212;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	-moz-transition: opacity 0.3s;
+	-o-transition: opacity 0.3s;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+.tooltip:hover .tooltip_content {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+	left:auto;
+}
+
+
+/*
+Uncomment the following markup to make the tooltips
+disappear when the field is clicked
+*/
+
+
+.tooltip input:focus ~ .tooltip_content {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+
+
+
+/*
+FEEDBACK MESSAGES
+*/
+
+
+
+.msg_error, 
+.msg_ok, 
+.msg_alert {
+	font-size:14px; 
+	text-shadow: 0 1px 0px rgba(255, 255, 255, 0.4);
+	line-height:12px;
+	width:93%;
+	clear:both;
+	padding:10px 10px 10px 16px;
+	margin:8px auto 8px 0px; 
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow: 0 0px 4px rgba(0,0,0,0.2), inset 0 1px 1px rgba(255,255,255,0.5);
+	-webkit-box-shadow: 0 0px 4px rgba(0,0,0,0.2), inset 0 1px 1px rgba(255,255,255,0.5);
+	box-shadow: 0 0px 4px rgba(0,0,0,0.2), inset 0 1px 1px rgba(255,255,255,0.5);
+}
+	.msg_error p, 
+	.msg_ok p, 
+	.msg_alert p {
+		padding:0 0 0 30px;
+		margin:0;
+	}
+.msg_error {
+	border:#f4afa6 solid 1px; 
+	color:#992213;
+	background:#FBE5E2; 
+	background: -webkit-gradient(linear, left top, left bottom, from(#FBE5E2), to(#f7cac4));
+	background: -webkit-linear-gradient(top, #FBE5E2, #f7cac4);
+	background: -moz-linear-gradient(top, #FBE5E2, #f7cac4);
+	background: -ms-linear-gradient(top, #FBE5E2, #f7cac4);
+	background: -o-linear-gradient(top, #FBE5E2, #f7cac4);
+	background: linear-gradient(top, #FBE5E2, #f7cac4);
+}
+	.msg_error p {
+		background:url("../images/msg/del.png") no-repeat 0 0; 
+	}
+.msg_ok {
+	border:#C6D880 solid 1px; 
+	color:#37620d;
+	background:#E1F8CB; 
+	background: -webkit-gradient(linear, left top, left bottom, from(#E1F8CB), to(#d0f4ad));
+	background: -webkit-linear-gradient(top, #E1F8CB, #d0f4ad);
+	background: -moz-linear-gradient(top, #E1F8CB, #d0f4ad);
+	background: -ms-linear-gradient(top, #E1F8CB, #d0f4ad);
+	background: -o-linear-gradient(top, #E1F8CB, #d0f4ad);
+	background: linear-gradient(top, #E1F8CB, #d0f4ad);
+}
+	.msg_ok p {
+		background:url("../images/msg/ok.png") no-repeat 0 0; 
+	}
+.msg_alert {
+	border:#FFD324 solid 1px; 
+	color:#756730;
+	background:#FFB; 
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFB), to(#ff9));
+	background: -webkit-linear-gradient(top, #FFB, #ff9);
+	background: -moz-linear-gradient(top, #FFB, #ff9);
+	background: -ms-linear-gradient(top, #FFB, #ff9);
+	background: -o-linear-gradient(top, #FFB, #ff9);
+	background: linear-gradient(top, #FFB, #ff9);
+}
+	.msg_alert p {
+		background:url("../images/msg/alert.png") no-repeat 0 0; 
+}
+	
+
